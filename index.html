@@ -1,37 +1,52 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="format-detection" content="telephone=no">
-  <title>Видео Онлайн</title>
-  <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>Видео онлайн</title>
+	<link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
-  <div class="offer">
-    <div class="inner">
-      <span>Нажатием на кнопку "Смотреть" Вы подтверждаете свое согласие с подключением подписки SUBNAME и <a
-        href="http://podpiski.megafon.ru/col/mds4/web/jsp/files/oferta.pdf">Условиями предоставления подписки</a>. Стоимость подписки SUBPRICE.ACCOUNT. Услуга предоставляется Контент-провайдером PROVIDER.</span>
-    </div>
-  </div>
-  <div class="header">
+  <div class="header" id="header-block">
+		<div class="offer">
+			<span>Нажатием на кнопку "Смотреть" Вы подтверждаете свое согласие с подключением подписки SUBNAME и <a	href="http://podpiski.megafon.ru/col/mds4/web/jsp/files/oferta.pdf">Условиями предоставления подписки</a>. Стоимость подписки SUBPRICE.ACCOUNT. Услуга предоставляется Контент-провайдером PROVIDER.</span>
+		</div>
     <div class="inner">
       <div class="logo-wrapper">
         <div class="logo"></div>
       </div>
       <div class="name">
-        <span>Видео</span><span>онлайн</span>
+        <span class="header-text">Видео</span><span class="header-text">онлайн</span>
       </div>
       <div class="plus18">
-        <div></div>
+        <div class="age-limit">18+</div>
       </div>
     </div>
   </div>
 
-  <div class="main">
+  <div class="main" id="main-block">
     <div class="inner">
+			<div class="tools">
+				<div class="inner">
+					<div class="share">
+						<button disabled></button>
+					</div>
+					<div class="like">
+						<button disabled></button>
+					</div>
+					<div class="dislike">
+						<button disabled></button>
+					</div>
+					<div class="repeat">
+						<button disabled></button>
+					</div>
+				</div>
+			</div>
       <div class="video">
         <div class="inner">
           <div class="bg-preview"></div>
@@ -51,32 +66,52 @@
           <div class="inner"></div>
         </div>
       </div>
+			<div class="player-bottom">
+				<div class="inner">
+					<div class="prev">
+						<button disabled></button>
+					</div>
+					<div class="next">
+						<button disabled></button>
+					</div>
+					<div class="menu">
+						<button disabled></button>
+					</div>
+					<div class="mute">
+						<button disabled></button>
+					</div>
+					<div class="upload">
+						<button disabled></button>
+					</div>
+				</div>
+			</div>
       <div class="btn-wrapper" id="btn-wrapper">
         <div class="heading">
           <p>Приятного просмотра</p>
         </div>
-        <a class="btn" id="wapSubmitBtn" href="<TARIF_YES_URL>">
-          <div class="icon"></div>
-          <div class="text">PLAY</div>
-        </a>
-        <div class="cancel">
-          <a href="<TARIF_NO_URL>">
-            <span>Отмена</span>
-          </a>
-        </div>
+				<a class="btn" id="wapSubmitBtn" href="#<TARIF_YES_URL>">
+					<div class="icon"></div>
+					<div class="text">PLAY</div>
+				</a>
+				<div class="cancel">
+					<a href="#<TARIF_NO_URL>">
+						<span>Отмена</span>
+					</a>
+				</div>
       </div>
     </div>
   </div>
 
-  <div class="rules" id="footer">
-    <div class="inner">
-      <p>Информация для абонентов - тел. 8 800 500-25-43 (бесплатно в домашнем регионе) | <a href="ВАША ССЫЛКА НА ПРАВИЛА ПОДПИСКИ">Правила подписки поставщика услуг</a> | <a href="#<LK_LINK_URL>">Личный кабинет</a></p>
-    </div>
+  <div class="rules" id="footer-block">
+  <div class="inner">
+		<p>Информация для абонентов - тел. 8 800 500-25-43 (бесплатно в домашнем регионе) | <a
+			href="ВАША ССЫЛКА НА ПРАВИЛА ПОДПИСКИ">Правила подписки поставщика услуг</a> | <a href="#<LK_LINK_URL>">Личный кабинет</a></p>
   </div>
+</div>
 <script type="text/javascript">
     //<![CDATA[
     function rsz() {
-        var footer = document['getElementById']('footer');
+        var footer = document['getElementById']('footer-block');
         var buttonWrap = document['getElementsByClassName']('btn-wrapper')[0];
         footer['style']['bottom'] = "auto";
         footer['style']['top'] = (window['innerHeight'] - footer.offsetHeight) + 'px';
